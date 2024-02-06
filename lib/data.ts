@@ -1,5 +1,4 @@
 import React from 'react';
-import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 
@@ -36,51 +35,151 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
-    location: 'Miami, FL',
+    title: 'B.S. in Chemistry and Biochemistry',
+    location: 'California State University, Fullerton',
     description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+      'I honed my analytical skills and passion for STEM fields. Equipped with a solid foundation, I was eager to apply my knowledge to real-world challenges.',
+    icon: React.createElement(LuGraduationCap),
+    date: '2018',
+  },
+  {
+    title: 'Continuing Education, Full-Stack Software Development',
+    location: 'University of California, Irvine',
+    description:
+      "Polished my skills in both front-end and back-end technologies. Through hands-on projects and rigorous training, I've refined the ability to craft scalable and user-centric web applications, ready to contribute innovative solutions to the ever-evolving technology industry.",
     icon: React.createElement(LuGraduationCap),
     date: '2019',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Orlando, FL',
+    title: 'Software Developer Intern',
+    location: 'Metagenics, Inc.',
     description:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
-    icon: React.createElement(CgWorkAlt),
-    date: '2019 - 2021',
+      'As a Software Developer Intern, I delved into the world of professional software development, laying the foundation for my journey from intern to senior developer I immersed myself in projects that sparked my passion for software engineering.',
+    icon: React.createElement(FaReact),
+    date: 'May 2019 - Sep 2019',
   },
   {
-    title: 'Full-Stack Developer',
-    location: 'Houston, TX',
+    title: 'Junior Software Engineer',
+    location: 'Metagenics, Inc.',
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      'Transitioning to the role of Junior Software Engineer, I continued to harness the power of Frontend Technologies, contributing to the development of cutting-edge solutions in the realm of eCommerce healthcare.',
     icon: React.createElement(FaReact),
-    date: '2021 - present',
+    date: 'Sep 2019 - Feb 2021',
+  },
+  {
+    title: 'Software Engineer, Frontend',
+    location: 'Metagenics, Inc.',
+    description:
+      'I navigated complex challenges in software development, leveraging React/Next.js and related technologies to drive innovation and streamline processes within the organization.',
+    icon: React.createElement(FaReact),
+    date: 'Feb 2019 - Dec 2022',
+  },
+  {
+    title: 'Senior Software Engineer, Frontend',
+    location: 'Metagenics, Inc.',
+    description:
+      'Currently serving as a Senior Software Engineer, I lead initiatives that push the boundaries of software engineering excellence. With React/Next.js as my cornerstone, I collaborate with cross-functional teams to deliver robust solutions that redefine the eCommerce Web Application landscape.',
+    icon: React.createElement(FaReact),
+    date: 'Dec 2022 - Present',
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: 'CorpComment',
+    title: 'bionutrics.fr',
     description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
+      'Spearheaded the frontend development and maintenance of the Bionutrics.fr eCommerce website, focusing on high performance, accessibility, and scalability.',
+    tags: [
+      'React',
+      'Next.js',
+      'Vercel',
+      'HTML/CSS',
+      'TypeScript',
+      'JavaScript',
+      'Contentful CMS',
+      'commerceTools',
+      'AWS Services',
+      'Cloudflare',
+      'New Relic',
+      'Data Dog',
+      'Axios',
+      'GraphQL',
+      'Apollo',
+      'React Testing Library',
+      'ESLint',
+      'Adyen Payment Processor',
+    ],
     imageUrl: corpcommentImg,
   },
   {
-    title: 'rmtDev',
+    title: 'metagenics.co.jp',
     description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
+      'Metagenics Japanese eCommerce website, focusing on performance, user experience, and scalability.',
+    tags: [
+      'React',
+      'Next.js',
+      'Vercel',
+      'HTML/CSS',
+      'TypeScript',
+      'JavaScript',
+      'Contentful CMS',
+      'commerceTools',
+      'AWS Services',
+      'Cloudflare',
+      'New Relic',
+      'Axios',
+      'GraphQL',
+      'Apollo',
+      'React Testing Library',
+      'ESLint',
+      'CyberSource Payment Processor',
+    ],
     imageUrl: rmtdevImg,
   },
   {
-    title: 'Word Analytics',
+    title: 'portal.metagenics.com',
     description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+      'Led the frontend development and deployment efforts for the portal.metagenics.com website, a marketing platform sponsored by Metagenics, focusing on user engagement, performance, and search engine optimization (SEO).',
+    tags: [
+      'React',
+      'Next.js',
+      'Vercel',
+      'Tailwind',
+      'TypeScript',
+      'Google Analytics',
+      'OneTrust Cookie Consent',
+      'next-seo',
+      'next-sitemap',
+    ],
+    imageUrl: wordanalyticsImg,
+  },
+  {
+    title: 'brownbenefits.com',
+    description:
+      'Developed and customized the brownbenefits.com landing page on Wix, focusing on branding requirements, visual appeal, and user experience',
+    tags: [
+      'Wix',
+      'HTML/CSS',
+      'Cross-browser Compatibility',
+      'Accessibility Standards',
+    ],
+    imageUrl: wordanalyticsImg,
+  },
+  {
+    title: 'plmc.com',
+    description:
+      'Developed and deployed the plmc.com website, a marketing platform sponsored by Metagenics, focusing on user engagement, performance, and search engine optimization (SEO).',
+    tags: [
+      'React',
+      'Next.js',
+      'Vercel',
+      'JavaScript',
+      'HTML/CSS',
+      'Contentful CMS',
+      'Google Analytics',
+      'next-seo',
+      'next-sitemap',
+    ],
     imageUrl: wordanalyticsImg,
   },
 ] as const;

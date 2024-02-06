@@ -67,7 +67,7 @@ export default function Intro() {
         <span className="font-bold">Hello, I&apos;m Bijan.</span> I&apos;m a{' '}
         <span className="font-bold">Software Developer</span> with{' '}
         <span className="font-bold">{currentYear - 2019}+ years</span> of
-        profesional experience. I enjoy crafting online experiences. <br />
+        professional experience. I enjoy crafting online adventures. <br />
         <br />
         My niche is{' '}
         <span className="underline">
