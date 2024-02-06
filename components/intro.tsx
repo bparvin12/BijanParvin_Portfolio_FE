@@ -1,20 +1,18 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaSquareGitlab } from "react-icons/fa6";
-import { RiInstagramFill } from "react-icons/ri";
-import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import React from 'react';
+import { BsLinkedin } from 'react-icons/bs';
+import { FaGithubSquare } from 'react-icons/fa';
+import { FaSquareGitlab } from 'react-icons/fa6';
+import { HiDownload } from 'react-icons/hi';
+import { RiInstagramFill } from 'react-icons/ri';
+
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { ref } = useSectionInView('Home', 0.5);
 
   const currentYear = new Date().getFullYear();
 
@@ -22,7 +20,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -30,7 +28,7 @@ export default function Intro() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
+              type: 'tween',
               duration: 0.2,
             }}
           >
@@ -41,7 +39,7 @@ export default function Intro() {
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="size-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
             />
           </motion.div>
 
@@ -50,7 +48,7 @@ export default function Intro() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
+              type: 'spring',
               stiffness: 125,
               delay: 0.1,
               duration: 0.7,
@@ -66,17 +64,23 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Bijan.</span> I'm a{" "}
-        <span className="font-bold">Software Developer</span> with{" "}
-        <span className="font-bold">{currentYear - 2019}+ years</span> of profesional experience. I enjoy
-        crafting online experiences. <br /><br />My niche is{" "}
-        <span className="underline">Frontend Engineering ~ React (Next.js)</span> 🚀, 
-        but I am a forever learner and enjoy diving into <span className="underline">Full Stack Applications</span>.<br/><br />
+        <span className="font-bold">Hello, I&apos;m Bijan.</span> I&apos;m a{' '}
+        <span className="font-bold">Software Developer</span> with{' '}
+        <span className="font-bold">{currentYear - 2019}+ years</span> of
+        profesional experience. I enjoy crafting online experiences. <br />
+        <br />
+        My niche is{' '}
+        <span className="underline">
+          Frontend Engineering ~ React (Next.js)
+        </span>{' '}
+        🚀, but I am a forever learner and enjoy diving into{' '}
+        <span className="underline">Full Stack Applications</span>.<br />
+        <br />
         Feel free to explore my journey! 📔
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -84,16 +88,16 @@ export default function Intro() {
         }}
       >
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
           href="/BijanParvin_Resume_FE.pdf"
           download
         >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          Download CV{' '}
+          <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/bparvin12/"
           target="_blank"
         >
@@ -101,7 +105,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://gitlab.com/bparvin12"
           target="_blank"
         >
@@ -109,15 +113,15 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://github.com/bparvin12"
           target="_blank"
         >
           <FaGithubSquare />
         </a>
-       
+
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://www.instagram.com/reactjs.tips/"
           target="_blank"
         >
