@@ -60,23 +60,25 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-xl !leading-[1.5] sm:text-2xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Bijan.</span> I&apos;m a{' '}
-        <span className="font-bold">Software Developer</span> with{' '}
-        <span className="font-bold">{currentYear - 2019}+ years</span> of
-        professional experience. I enjoy crafting online adventures. <br />
-        <br />
-        My niche is{' '}
-        <span className="underline">
-          Frontend Engineering ~ React (Next.js)
-        </span>{' '}
-        🚀, but I am a forever learner and enjoy diving into{' '}
-        <span className="underline">Full Stack Applications</span>.<br />
-        <br />
-        Feel free to explore my journey! 🗺️
+        <p className="pb-3">
+          <span className="font-bold">Hello, I&apos;m Bijan.</span> I&apos;m a{' '}
+          <span className="font-bold">Software Developer</span> with{' '}
+          <span className="font-bold">{currentYear - 2019}+ years</span> of
+          professional experience. I enjoy crafting online adventures.
+        </p>
+        <p className="pb-3">
+          My niche is{' '}
+          <span className="underline">
+            Frontend Engineering ~ React (Next.js)
+          </span>{' '}
+          🚀, but I am a forever learner and enjoy diving into{' '}
+          <span className="underline">Full Stack Applications</span>.
+        </p>
+        <p className="pb-3">Feel free to explore my journey! 🗺️</p>
       </motion.h1>
 
       <motion.div
