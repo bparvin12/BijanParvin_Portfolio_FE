@@ -156,7 +156,7 @@ export const projectsData = [
       'next-sitemap',
     ],
     imageUrl: portalMeta,
-    projectUrl: 'https://portal.metagenics.com',
+    projectUrl: 'https://portal.metagenics.com/hcp-landing-page',
   },
   {
     title: 'brownbenefits.com',
