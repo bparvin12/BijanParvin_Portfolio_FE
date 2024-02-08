@@ -2,9 +2,11 @@ import React from 'react';
 import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 
-import corpcommentImg from '@/public/corpcomment.png';
-import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
+import bionutricsHomepage from '@/public/Bionutrics_Homepage.png';
+import brownBenefits from '@/public/brownbenefits.png';
+import jpMetagenics from '@/public/metagenics_jp.png';
+import plmc from '@/public/plmc.png';
+import portalMeta from '@/public/portal_metagenics.png';
 
 export const links = [
   {
@@ -109,7 +111,8 @@ export const projectsData = [
       'ESLint',
       'Adyen Payment Processor',
     ],
-    imageUrl: corpcommentImg,
+    imageUrl: bionutricsHomepage,
+    projectUrl: 'https://bionutrics.fr',
   },
   {
     title: 'metagenics.co.jp',
@@ -134,7 +137,8 @@ export const projectsData = [
       'ESLint',
       'CyberSource Payment Processor',
     ],
-    imageUrl: rmtdevImg,
+    imageUrl: jpMetagenics,
+    projectUrl: 'https://www.metagenics.co.jp',
   },
   {
     title: 'portal.metagenics.com',
@@ -151,7 +155,8 @@ export const projectsData = [
       'next-seo',
       'next-sitemap',
     ],
-    imageUrl: wordanalyticsImg,
+    imageUrl: portalMeta,
+    projectUrl: 'https://portal.metagenics.com',
   },
   {
     title: 'brownbenefits.com',
@@ -163,7 +168,8 @@ export const projectsData = [
       'Cross-browser Compatibility',
       'Accessibility Standards',
     ],
-    imageUrl: wordanalyticsImg,
+    imageUrl: brownBenefits,
+    projectUrl: 'https://www.brownbenefits.com',
   },
   {
     title: 'plmc.com',
@@ -180,7 +186,8 @@ export const projectsData = [
       'next-seo',
       'next-sitemap',
     ],
-    imageUrl: wordanalyticsImg,
+    imageUrl: plmc,
+    projectUrl: 'https://www.plmc.com',
   },
 ] as const;
 
