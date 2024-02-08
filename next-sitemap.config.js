@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.VERCEL_URL || 'https://www.bparvin.com',
+  siteUrl: 'https://bijan-parvin-portfolio-fe.vercel.app/',
   generateRobotsTxt: true,
   sitemapSize: 7000,
   generateIndexSitemap: false,

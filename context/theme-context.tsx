@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-type Theme = 'light' | 'dark';
+type Theme = 'dark' | 'light';
 
 type ThemeContextProviderProps = {
   children: React.ReactNode;
@@ -34,6 +34,10 @@ export default function ThemeContextProvider({
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme') as Theme | null;
+    if (!localTheme) {
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
+    }
 
     if (localTheme) {
       setTheme(localTheme);
