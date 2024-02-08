@@ -37,36 +37,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'B.S. in Chemistry and Biochemistry',
-    location: 'California State University, Fullerton',
-    description:
-      'I honed my analytical skills and passion for STEM fields. Equipped with a solid foundation, I was eager to apply my knowledge to real-world challenges.',
-    icon: React.createElement(LuGraduationCap),
-    date: '2018',
-  },
-  {
-    title: 'Continuing Education, Full-Stack Software Development',
-    location: 'University of California, Irvine',
-    description:
-      "Polished my skills in both front-end and back-end technologies. Through hands-on projects and rigorous training, I've refined the ability to craft scalable and user-centric web applications, ready to contribute innovative solutions to the ever-evolving technology industry.",
-    icon: React.createElement(LuGraduationCap),
-    date: '2019',
-  },
-  {
-    title: 'Software Developer Intern',
+    title: 'Senior Software Engineer, Frontend',
     location: 'Metagenics, Inc.',
     description:
-      'As a Software Developer Intern, I delved into the world of professional software development, laying the foundation for my journey from intern to senior developer I immersed myself in projects that sparked my passion for software engineering.',
+      'Currently serving as a Senior Software Engineer, I lead initiatives that push the boundaries of software engineering excellence. With React/Next.js as my cornerstone, I collaborate with cross-functional teams to deliver robust solutions that redefine the eCommerce Web Application landscape.',
     icon: React.createElement(FaReact),
-    date: 'May 2019 - Sep 2019',
-  },
-  {
-    title: 'Junior Software Engineer',
-    location: 'Metagenics, Inc.',
-    description:
-      'Transitioning to the role of Junior Software Engineer, I continued to harness the power of Frontend Technologies, contributing to the development of cutting-edge solutions in the realm of eCommerce healthcare.',
-    icon: React.createElement(FaReact),
-    date: 'Sep 2019 - Feb 2021',
+    date: 'Dec 2022 - Present',
   },
   {
     title: 'Software Engineer, Frontend',
@@ -77,12 +53,36 @@ export const experiencesData = [
     date: 'Feb 2019 - Dec 2022',
   },
   {
-    title: 'Senior Software Engineer, Frontend',
+    title: 'Junior Software Engineer',
     location: 'Metagenics, Inc.',
     description:
-      'Currently serving as a Senior Software Engineer, I lead initiatives that push the boundaries of software engineering excellence. With React/Next.js as my cornerstone, I collaborate with cross-functional teams to deliver robust solutions that redefine the eCommerce Web Application landscape.',
+      'Transitioning to the role of Junior Software Engineer, I continued to harness the power of Frontend Technologies, contributing to the development of cutting-edge solutions in the realm of eCommerce healthcare.',
     icon: React.createElement(FaReact),
-    date: 'Dec 2022 - Present',
+    date: 'Sep 2019 - Feb 2021',
+  },
+  {
+    title: 'Software Developer Intern',
+    location: 'Metagenics, Inc.',
+    description:
+      'As a Software Developer Intern, I delved into the world of professional software development, laying the foundation for my journey from intern to senior developer I immersed myself in projects that sparked my passion for software engineering.',
+    icon: React.createElement(FaReact),
+    date: 'May 2019 - Sep 2019',
+  },
+  {
+    title: 'Continuing Education, Full-Stack Software Development',
+    location: 'University of California, Irvine',
+    description:
+      "Polished my skills in both front-end and back-end technologies. Through hands-on projects and rigorous training, I've refined the ability to craft scalable and user-centric web applications, ready to contribute innovative solutions to the ever-evolving technology industry.",
+    icon: React.createElement(LuGraduationCap),
+    date: '2019',
+  },
+  {
+    title: 'B.S. in Chemistry and Biochemistry',
+    location: 'California State University, Fullerton',
+    description:
+      'I honed my analytical skills and passion for STEM fields. Equipped with a solid foundation, I was eager to apply my knowledge to real-world challenges.',
+    icon: React.createElement(LuGraduationCap),
+    date: '2018',
   },
 ] as const;
 
