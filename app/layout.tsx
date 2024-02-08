@@ -1,5 +1,6 @@
 import './globals.css';
 
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
@@ -11,10 +12,39 @@ import ThemeContextProvider from '@/context/theme-context';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '{ bparvin } | Portfolio',
   description:
     'Bijan is a Frontend Software Developer with 5+ years of experience.',
+  applicationName: "bparvin's portfolio",
+  authors: { name: 'Bijan Parvin' },
+  generator: 'react, nextjs, vercel, tailwind, typescript',
+  keywords: [
+    'react',
+    'nextjs',
+    'vercel',
+    'tailwind',
+    'typescript',
+    'portfolio',
+  ],
+  themeColor: 'dark',
+  creator: 'Bijan Parvin',
+  openGraph: {
+    type: 'website',
+    title: '{ bparvin } | Portfolio',
+    description:
+      'Bijan is a Frontend Software Developer with 5+ years of experience.',
+    emails: 'bparvin12@gmail.com',
+    siteName: '{ bparvin } | Portfolio',
+    locale: 'en-US',
+    url: 'https://bijan-parvin-portfolio-fe.vercel.app/',
+  },
+  twitter: {
+    site: '{ bparvin } | Portfolio',
+    creator: 'Bijan Parvin',
+    description:
+      'Bijan is a Frontend Software Developer with 5+ years of experience.',
+  },
 };
 
 export default function RootLayout({
