@@ -99,7 +99,7 @@ Open http://localhost:3000 with your favorite browser to see your project. For y
 
 
 ## SEO INFO and OpenGraph
-This project utilizes [next-seo](https://github.com/garmeeh/next-seo) to implement proper SEO tags and info.
+This project utilizes Next.js implementations for SEO Metadata.
 
 
 ## Sitemap

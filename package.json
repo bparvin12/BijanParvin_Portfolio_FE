@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore"
+    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
+    "check-types": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "@react-email/components": "^0.0.7",
@@ -34,6 +36,7 @@
     "eslint-plugin-unused-imports": "^3.0.0",
     "framer-motion": "^10.12.17",
     "next": "13.4.8",
+    "next-sitemap": "^4.2.3",
     "postcss": "8.4.24",
     "prettier": "^3.1.1",
     "react": "18.2.0",
