@@ -95,7 +95,15 @@ export default function Intro() {
           Download CV{' '}
           <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
         </a>
-
+      </motion.div>
+      <motion.div
+        className="flex flex-row items-center justify-center gap-2 p-4 text-lg font-medium sm:flex-row"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
+      >
         <a
           className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/bparvin12/"
