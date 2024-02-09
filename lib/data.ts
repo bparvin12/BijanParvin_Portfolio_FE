@@ -18,16 +18,16 @@ export const links = [
     hash: '#about',
   },
   {
-    name: 'Projects',
-    hash: '#projects',
+    name: 'Experience',
+    hash: '#experience',
   },
   {
     name: 'Skills',
     hash: '#skills',
   },
   {
-    name: 'Experience',
-    hash: '#experience',
+    name: 'Projects',
+    hash: '#projects',
   },
   {
     name: 'Contact',
@@ -190,6 +190,66 @@ export const projectsData = [
     projectUrl: 'https://www.plmc.com',
   },
 ] as const;
+
+export const personalProjectsData = [
+  {
+    title: 'Portfolio',
+    description:
+      'Responsive portfolio for displaying professional and personal experience',
+    tags: ['React', 'Next.js', 'Vercel', 'HTML/CSS', 'TypeScript', 'Tailwind'],
+    link: 'https://github.com/bparvin12/BijanParvin_Portfolio_FE',
+  },
+  {
+    title: 'Next.js Marketing Template',
+    description:
+      'Template for creating clean/modern marketing websites and landing pages',
+    tags: ['React', 'Next.js', 'Vercel', 'HTML/CSS', 'TypeScript', 'Tailwind'],
+    link: 'https://github.com/bparvin12/metagenics-marketing-pages-nam',
+  },
+  {
+    title: 'Next.js 14 Code Share Project',
+    description: 'Next.js Project ~ App Router Practice',
+    tags: ['React', 'Next.js', 'Vercel', 'Prisma', 'TypeScript', 'Tailwind'],
+    link: 'https://github.com/bparvin12/nextjs-14-code-share-tutorial',
+  },
+  {
+    title: 'Next.js 14 Corporation Project',
+    description: 'Next.js Project v14 ~ App Router Practice',
+    tags: ['React', 'Next.js', 'Vercel', 'ESLint', 'TypeScript', 'Tailwind'],
+    link: 'https://github.com/bparvin12/nextjs-14-corporation-tutorial',
+  },
+  {
+    title: 'Next.js 14 Foodies App',
+    description: 'Next.js Project v14 ~ Food Dashboard',
+    tags: ['React', 'Next.js', 'Vercel', 'ESLint', 'JavaScript', 'SQLite'],
+    link: 'https://github.com/bparvin12/nextjs-14-course-foodies-app',
+  },
+  {
+    title: 'TypeScript Course',
+    description: 'TypeScript Course and Practice from Udemy',
+    tags: ['TypeScript', 'React'],
+    link: 'https://github.com/bparvin12/typescript-course',
+  },
+  {
+    title: 'Turbo Repo Next.js',
+    description: 'Understanding turbo repos with Next.js and React',
+    tags: ['TypeScript', 'React', 'Next.js', 'turbo repo'],
+    link: 'https://github.com/bparvin12/turborepo-next-basic',
+  },
+  {
+    title: 'Next.js Dashboard App Router',
+    description: 'Practicing with Next.js App Router and version 14',
+    tags: ['TypeScript', 'React', 'Next.js', 'App Router'],
+    link: 'https://github.com/bparvin12/nextjs-dashboard-app-router-tutorial',
+  },
+  {
+    title: 'Glebhan',
+    description:
+      'Wedding website built with React.js, custom CSS, and Bootstrap',
+    tags: ['JavaScript', 'React', 'Bootstrap', 'HTML/CSS'],
+    link: 'https://github.com/bparvin12/Glebhan',
+  },
+];
 
 export const skillsData = [
   'TypeScript',
