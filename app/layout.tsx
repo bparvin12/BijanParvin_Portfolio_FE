@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: '{ bparvin } | Portfolio',
   description:
     'Bijan is a Frontend Software Developer with 5+ years of experience.',
+  metadatabase: 'https://bijan-parvin-portfolio-fe.vercel.app/',
   applicationName: "bparvin's portfolio",
   authors: { name: 'Bijan Parvin' },
   generator: 'react, nextjs, vercel, tailwind, typescript',
