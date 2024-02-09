@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: '{ bparvin } | Portfolio',
   description:
-    'Bijan is a Frontend Software Developer with 5+ years of experience.',
+    'Bijan is a Frontend Software Developer with 5+ years of experience. Here is a portfolio showcasing his professional and personal experience. Browse his journey.',
   metadataBase: new URL('https://bijan-parvin-portfolio-fe.vercel.app/'),
   applicationName: "bparvin's portfolio",
   authors: { name: 'Bijan Parvin' },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: '{ bparvin } | Portfolio',
     description:
-      'Bijan is a Frontend Software Developer with 5+ years of experience.',
+      'Bijan is a Frontend Software Developer with 5+ years of experience. Here is a portfolio showcasing his professional and personal experience. Browse his journey.',
     emails: 'bparvin12@gmail.com',
     siteName: '{ bparvin } | Portfolio',
     locale: 'en-US',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     site: '{ bparvin } | Portfolio',
     creator: 'Bijan Parvin',
     description:
-      'Bijan is a Frontend Software Developer with 5+ years of experience.',
+      'Bijan is a Frontend Software Developer with 5+ years of experience. Here is a portfolio showcasing his professional and personal experience. Browse his journey.',
   },
 };
 
