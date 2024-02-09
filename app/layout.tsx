@@ -1,5 +1,6 @@
 import './globals.css';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
@@ -70,6 +71,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <GoogleAnalytics gaId="G-056KJYPZ0M" />
 
             <Toaster position="top-right" />
             <ThemeSwitch />

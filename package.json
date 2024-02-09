@@ -12,6 +12,7 @@
     "check-types": "tsc --noEmit --pretty"
   },
   "dependencies": {
+    "@next/third-parties": "^14.1.0",
     "@react-email/components": "^0.0.7",
     "@react-email/tailwind": "^0.0.8",
     "@types/node": "20.3.2",
