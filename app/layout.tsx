@@ -57,14 +57,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} relative bg-indigo-50 pt-28 text-gray-950 dark:bg-sky-950 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
+        className={`${inter.className} relative bg-tan pt-28 text-policeBlue dark:bg-sky-950 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
       >
         {/* top */}
-        <div className="absolute right-[11rem] top-[-6rem] -z-10 size-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
-        <div className="absolute left-[-35rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#dbd7fb] blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="absolute right-[11rem] top-[-6rem] -z-10 size-[31.25rem] rounded-full bg-white/50 blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
+        <div className="absolute left-[-35rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
         {/* bottom */}
-        <div className="absolute bottom-[10rem] right-[11rem] -z-10 size-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
-        <div className="absolute bottom-[1rem] left-[-35rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#dbd7fb] blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="absolute bottom-[10rem] right-[11rem] -z-10 size-[31.25rem] rounded-full blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
+        <div className="absolute bottom-[1rem] left-[-35rem] -z-10 h-[31.25rem] w-[50rem] rounded-full blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

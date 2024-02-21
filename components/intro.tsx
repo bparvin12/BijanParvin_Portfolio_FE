@@ -90,7 +90,7 @@ export default function Intro() {
         }}
       >
         <a
-          className="borderBlack group mx-8 flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10"
+          className="borderBlack group mx-8 flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 dark:text-white"
           href="/BijanParvin_Resume_FE.pdf"
           download
         >
@@ -107,7 +107,7 @@ export default function Intro() {
         }}
       >
         <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
           href="https://www.linkedin.com/in/bparvin12/"
           target="_blank"
         >
@@ -115,7 +115,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
           href="https://gitlab.com/bparvin12"
           target="_blank"
         >
@@ -123,7 +123,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
           href="https://github.com/bparvin12"
           target="_blank"
         >
@@ -131,7 +131,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
           href="https://www.instagram.com/reactjs.tips/"
           target="_blank"
         >
