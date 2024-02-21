@@ -35,8 +35,8 @@ export default function Contact() {
       <SectionHeading>Contact me</SectionHeading>
 
       <div>
-        <div className="mt-6 border-t border-gray-500 dark:border-gray-200">
-          <dl className="divide-y divide-gray-500 dark:divide-gray-200">
+        <div className="mt-6 border-t border-policeBlue dark:border-gray-200">
+          <dl className="divide-y divide-policeBlue dark:divide-gray-200">
             {/* Name */}
             <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt className="text-sm font-medium leading-6">Full name</dt>
@@ -66,7 +66,7 @@ export default function Contact() {
                 }}
               >
                 <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
                   href="https://www.linkedin.com/in/bparvin12/"
                   target="_blank"
                 >
@@ -74,7 +74,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
                   href="https://gitlab.com/bparvin12"
                   target="_blank"
                 >
@@ -82,7 +82,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
                   href="https://github.com/bparvin12"
                   target="_blank"
                 >
@@ -90,7 +90,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
                   href="https://www.instagram.com/reactjs.tips/"
                   target="_blank"
                 >

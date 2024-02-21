@@ -21,13 +21,15 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline
+        lineColor={theme === 'light' ? '#3D5872' : 'rgba(255, 255, 255, 0.05)'}
+      >
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
                 background:
-                  theme === 'light' ? '#f3f4f6' : 'rgba(255, 255, 255, 0.05)',
+                  theme === 'light' ? '#3D5872' : 'rgba(255, 255, 255, 0.05)',
                 boxShadow: 'none',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
                 textAlign: 'left',
@@ -36,20 +38,24 @@ export default function Experience() {
               contentArrowStyle={{
                 borderRight:
                   theme === 'light'
-                    ? '0.4rem solid #9ca3af'
+                    ? '0.4rem solid #3D5872'
                     : '0.4rem solid rgba(255, 255, 255, 0.5)',
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
                 background:
-                  theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
+                  theme === 'light'
+                    ? 'rgb(183,173,161)'
+                    : 'rgba(255, 255, 255, 0.15)',
                 fontSize: '1.5rem',
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="!mt-0 font-normal">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <h3 className="font-semibold capitalize text-tan">
+                {item.title}
+              </h3>
+              <p className="!mt-0 font-normal text-tan">{item.location}</p>
+              <p className="!mt-1 !font-normal text-white/75 dark:text-white/75">
                 {item.description}
               </p>
             </VerticalTimelineElement>
