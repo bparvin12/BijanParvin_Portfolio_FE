@@ -200,6 +200,24 @@ export const personalProjectsData = [
     link: 'https://github.com/bparvin12/BijanParvin_Portfolio_FE',
   },
   {
+    title: 'Sports Betting Odds',
+    description:
+      'Sports Betting Odds and Spreads for all in-season sports. NFL, NHL, NBA, etc.',
+    tags: [
+      'React',
+      'Next.js',
+      'Vercel',
+      'HTML/CSS',
+      'TypeScript',
+      'Tailwind',
+      'Odds API',
+      'SSR',
+      'SSG',
+    ],
+    link: 'https://github.com/bparvin12/sports-betting-odds',
+    websiteLink: 'https://sports-betting-odds.vercel.app/',
+  },
+  {
     title: 'Next.js Marketing Template',
     description:
       'Template for creating clean/modern marketing websites and landing pages',

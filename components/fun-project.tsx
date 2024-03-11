@@ -1,4 +1,5 @@
 import React from 'react';
+import { CgWebsite } from 'react-icons/cg';
 import { FaGithubSquare } from 'react-icons/fa';
 
 type ProjectProps = {
@@ -6,6 +7,7 @@ type ProjectProps = {
   description: string;
   tags: string[];
   link: string;
+  websiteLink?: string;
 };
 
 export default function FunProject({
@@ -13,6 +15,7 @@ export default function FunProject({
   description,
   tags,
   link,
+  websiteLink,
 }: ProjectProps) {
   return (
     <div className="flex w-full flex-col justify-end rounded-lg border border-policeBlue bg-policeBlue p-4 transition hover:bg-policeBlue/90 dark:border-black/5 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-72">
@@ -31,12 +34,21 @@ export default function FunProject({
       </ul>
       <div className="flex w-full justify-end">
         <a
-          className="borderBlack my-2 flex w-min cursor-pointer items-center rounded-full bg-tan p-4 text-[1.35rem] text-policeBlue transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+          className="borderBlack my-2 mr-2 flex w-min cursor-pointer items-center rounded-full bg-tan p-4 text-[1.35rem] text-policeBlue transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href={link}
           target="_blank"
         >
           <FaGithubSquare />
         </a>
+        {websiteLink && (
+          <a
+            className="borderBlack my-2 flex w-min cursor-pointer items-center rounded-full bg-tan p-4 text-[1.35rem] text-policeBlue transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+            href={websiteLink}
+            target="_blank"
+          >
+            <CgWebsite />
+          </a>
+        )}
       </div>
     </div>
   );

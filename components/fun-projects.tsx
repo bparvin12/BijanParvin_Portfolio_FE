@@ -16,13 +16,14 @@ export default function FunProjects() {
       <SectionHeading>Learning and Personal Projects</SectionHeading>
       <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-4 lg:justify-start">
         {personalProjectsData.map(
-          ({ title, description, tags, link }, index) => (
+          ({ title, description, tags, link, websiteLink }, index) => (
             <React.Fragment key={index}>
               <FunProject
                 title={title}
                 description={description}
                 tags={tags}
                 link={link}
+                websiteLink={websiteLink}
               />
             </React.Fragment>
           ),
