@@ -5,6 +5,7 @@ import { LuGraduationCap } from 'react-icons/lu';
 import bionutricsHomepage from '@/public/Bionutrics_Homepage.png';
 import brownBenefits from '@/public/brownbenefits.png';
 import jpMetagenics from '@/public/metagenics_jp.png';
+import metagenicsHomepage from '@/public/metagenics-homepage.png';
 import plmc from '@/public/plmc.png';
 import portalMeta from '@/public/portal_metagenics.png';
 
@@ -37,12 +38,20 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: 'Lead Software Engineer (Frontend Engineer Focus)',
+    location: 'Metagenics, Inc.',
+    description:
+      'Recently promoted to Software Engineer Lead with a dedicated focus on Frontend Engineering. I drive technical direction, mentor engineers, and ensure the delivery of scalable, high-performance solutions across the eCommerce platform. My role bridges strategic architecture decisions with hands-on development, shaping the future of Metagenics’ digital experience.',
+    icon: React.createElement(FaReact),
+    date: 'Mar 2025 - Present',
+  },
+  {
     title: 'Senior Software Engineer, Frontend',
     location: 'Metagenics, Inc.',
     description:
       'Currently serving as a Senior Software Engineer, I lead initiatives that push the boundaries of software engineering excellence. With React/Next.js as my cornerstone, I collaborate with cross-functional teams to deliver robust solutions that redefine the eCommerce Web Application landscape.',
     icon: React.createElement(FaReact),
-    date: 'Dec 2022 - Present',
+    date: 'Dec 2022 - Mar 2025',
   },
   {
     title: 'Software Engineer, Frontend',
@@ -87,6 +96,33 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: 'metagenics.com',
+    description:
+      'Led the Frontend development and ongoing FullStack engineering of Metagenics’ global eCommerce platform. Focused on building scalable, high-performance features that deliver a personalized practitioner and patient experience.',
+    tags: [
+      'React',
+      'Next.js',
+      'Vercel',
+      'TypeScript',
+      'HTML/CSS',
+      'Contentful CMS',
+      'Commercetools',
+      'Apollo GraphQL',
+      'Axios',
+      'React Testing Library',
+      'ESLint',
+      'AWS Services',
+      'Cloudflare',
+      'Datadog',
+      'Cybersource Payment Processor',
+      'Ordergroove Subscriptions',
+      'GTM & GA',
+      'OneTrust Cookie Consent',
+    ],
+    imageUrl: metagenicsHomepage,
+    projectUrl: 'https://www.metagenics.com',
+  },
   {
     title: 'bionutrics.fr',
     description:

@@ -5,7 +5,6 @@ import React from 'react';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { FaSquareGitlab } from 'react-icons/fa6';
-import { RiInstagramFill } from 'react-icons/ri';
 
 import { useSectionInView } from '@/lib/hooks';
 
@@ -87,14 +86,6 @@ export default function Contact() {
                   target="_blank"
                 >
                   <FaGithubSquare />
-                </a>
-
-                <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
-                  href="https://www.instagram.com/reactjs.tips/"
-                  target="_blank"
-                >
-                  <RiInstagramFill />
                 </a>
               </motion.div>
             </div>
