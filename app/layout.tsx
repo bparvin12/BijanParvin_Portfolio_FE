@@ -2,16 +2,21 @@ import './globals.css';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header';
+import ScrollProgress from '@/components/scroll-progress';
 import ThemeSwitch from '@/components/theme-switch';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-context';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-heading',
+});
 
 export const metadata: Metadata = {
   title: '{ bparvin } | Portfolio',
@@ -62,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} relative bg-tan pt-28 text-policeBlue dark:bg-sky-950 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
+        className={`${inter.variable} ${spaceGrotesk.variable} relative bg-tan pt-28 font-body text-policeBlue dark:bg-sky-950 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
       >
         {/* top */}
         <div className="absolute right-[11rem] top-[-6rem] -z-10 size-[31.25rem] rounded-full bg-white/50 blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
@@ -73,6 +78,7 @@ export default function RootLayout({
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
+            <ScrollProgress />
             <Header />
             {children}
             <Footer />

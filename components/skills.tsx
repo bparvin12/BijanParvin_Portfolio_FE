@@ -3,24 +3,12 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-import { skillsData } from '@/lib/data';
+import { categorizedSkillsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 
 import SectionHeading from './section-heading';
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
+const categories = Object.entries(categorizedSkillsData);
 
 export default function Skills() {
   const { ref } = useSectionInView('Skills');
@@ -32,25 +20,39 @@ export default function Skills() {
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-3 text-lg text-tan">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="borderBlack rounded-xl bg-policeBlue px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-            whileHover={{ scale: 1.2, rotate: 10 }}
-            // transition={{ type: 'spring', stiffness: 300 }}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {categories.map(([category, skills], catIndex) => (
+          <motion.div
+            key={category}
+            className="rounded-xl border border-policeBlue/20 bg-policeBlue/5 p-5 dark:border-white/10 dark:bg-white/5"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: catIndex * 0.1 }}
           >
-            {skill}
-          </motion.li>
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-brand dark:text-brand-400">
+              {category}
+            </h3>
+            <ul className="flex flex-wrap gap-2">
+              {skills.map((skill, skillIndex) => (
+                <motion.li
+                  key={skill}
+                  className="group relative rounded-lg bg-policeBlue px-3 py-1.5 text-sm text-tan dark:bg-white/10 dark:text-white/80"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: catIndex * 0.1 + skillIndex * 0.03,
+                  }}
+                >
+                  {skill}
+                  <span className="absolute bottom-0 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-brand to-policeBlue transition-all duration-300 group-hover:w-full" />
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

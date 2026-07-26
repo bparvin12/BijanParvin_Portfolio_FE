@@ -347,3 +347,52 @@ export const skillsData = [
   'Jira',
   'Confluence',
 ] as const;
+
+export const categorizedSkillsData: Record<string, readonly string[]> = {
+  Frontend: [
+    'TypeScript',
+    'JavaScript',
+    'React',
+    'Next.js',
+    'HTML',
+    'CSS',
+    'Tailwind',
+    'Framer Motion',
+    'Storybook',
+  ],
+  'Backend & APIs': [
+    'Node.js',
+    'GraphQL',
+    'Apollo Federation',
+    'REST APIs',
+    'Prisma',
+    'commercetools',
+    'Contentful CMS',
+  ],
+  'Cloud & Infrastructure': [
+    'AWS (Lambda, S3, DynamoDB)',
+    'Vercel',
+    'Cloudflare',
+    'Serverless',
+    'CI/CD',
+    'Git',
+    'Datadog',
+  ],
+  'Architecture & Practices': [
+    'MACH Architecture',
+    'Solutions Architecture',
+    'AI / LLM Integration',
+    'React Testing Library',
+    'Technical Documentation',
+  ],
+  'Leadership & Collaboration': [
+    'Technical Leadership',
+    'Mentoring',
+    'Vendor Evaluation',
+    'Cross-functional Collaboration',
+    'Agile / Scrum',
+    'Figma',
+    'Jira',
+    'Confluence',
+  ],
+};

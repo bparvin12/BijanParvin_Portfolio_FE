@@ -2,10 +2,8 @@
 
 import { motion } from 'framer-motion';
 import React from 'react';
-import { BsLinkedin } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
-import { FaSquareGitlab } from 'react-icons/fa6';
 
+import SocialLinks from '@/components/social-links';
 import { useSectionInView } from '@/lib/hooks';
 
 import SectionHeading from './section-heading';
@@ -55,39 +53,8 @@ export default function Contact() {
             </div>
 
             {/* Social Media */}
-            <div className="flex flex-col items-center justify-center px-4 py-6 ">
-              <motion.div
-                className="flex w-full flex-row items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.1,
-                }}
-              >
-                <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
-                  href="https://www.linkedin.com/in/bparvin12/"
-                  target="_blank"
-                >
-                  <BsLinkedin />
-                </a>
-
-                <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
-                  href="https://gitlab.com/bparvin12"
-                  target="_blank"
-                >
-                  <FaSquareGitlab />
-                </a>
-
-                <a
-                  className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
-                  href="https://github.com/bparvin12"
-                  target="_blank"
-                >
-                  <FaGithubSquare />
-                </a>
-              </motion.div>
+            <div className="flex flex-col items-center justify-center px-4 py-6">
+              <SocialLinks />
             </div>
           </dl>
         </div>

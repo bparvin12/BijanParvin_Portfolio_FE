@@ -3,12 +3,19 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import { BsLinkedin } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
-import { FaSquareGitlab } from 'react-icons/fa6';
 import { HiDownload } from 'react-icons/hi';
 
+import SocialLinks from '@/components/social-links';
 import { useSectionInView } from '@/lib/hooks';
+
+const titleWords = [
+  'Senior',
+  'Software',
+  'Engineer',
+  '&',
+  'Technical',
+  'Leader',
+];
 
 export default function Intro() {
   const { ref } = useSectionInView('Home', 0.5);
@@ -19,125 +26,117 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      className="mb-28 max-w-[50rem] scroll-mt-[100rem] sm:mb-0"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
+      <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12">
+        {/* Left: text content */}
+        <div className="flex-1 text-center md:text-left">
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: 'tween',
-              duration: 0.2,
-            }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
+            <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">
+              <span className="font-light text-brand/30">{'{ '}</span>
+              Bijan Parvin
+              <span className="font-light text-brand/30">{' }'}</span>
+            </h1>
+
+            <div className="mt-3 flex flex-wrap justify-center gap-x-2 text-lg font-medium text-policeBlue/80 dark:text-gray-300 md:justify-start">
+              {titleWords.map((word, i) => (
+                <motion.span
+                  key={word}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + i * 0.08 }}
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="mt-6 space-y-3 text-base !leading-[1.6]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <p>
+              <span className="font-bold">{currentYear - 2019}+ years</span> of
+              professional experience building enterprise platforms.
+            </p>
+            <p>
+              I architect and deliver{' '}
+              <span className="underline decoration-brand/50">
+                scalable eCommerce solutions
+              </span>
+              , lead engineering teams, and bridge the gap between{' '}
+              <span className="underline decoration-brand/50">
+                technical depth
+              </span>{' '}
+              and{' '}
+              <span className="underline decoration-brand/50">
+                business impact
+              </span>
+              .
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="mt-6 flex flex-col items-center gap-3 text-base font-medium sm:flex-row md:items-start"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            <a
+              className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-105 focus:scale-105 active:scale-100 dark:bg-white/10 dark:text-white"
+              href="/Bijan_Parvin_Resume_Software_Engineer.pdf"
+              download
+            >
+              Software Engineering CV{' '}
+              <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
+            </a>
+            <a
+              className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-105 focus:scale-105 active:scale-100 dark:bg-white/10 dark:text-white"
+              href="/Bijan_Parvin_Resume_Solutions_Engineer_Tech_Sales.pdf"
+              download
+            >
+              Solutions Engineering CV{' '}
+              <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="mt-4 flex justify-center md:justify-start"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+          >
+            <SocialLinks />
+          </motion.div>
+        </div>
+
+        {/* Right: profile image with animated gradient border */}
+        <motion.div
+          className="order-first shrink-0 md:order-last"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: 'tween', duration: 0.4 }}
+        >
+          <div className="gradient-border rounded-full p-1">
             <Image
               src="/profile_pic.jpeg"
               alt="Bijan Parvin Profile Picture"
-              width="192"
-              height="192"
+              width="256"
+              height="256"
               quality="95"
-              priority={true}
-              className="size-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
+              priority
+              className="size-48 rounded-full object-cover sm:size-56 md:size-64"
             />
-          </motion.div>
-
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: 'spring',
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
-        </div>
+          </div>
+        </motion.div>
       </div>
-
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-xl !leading-[1.5] sm:text-2xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <p className="pb-3">
-          <span className="font-bold">Hello, I&apos;m Bijan.</span> I&apos;m a{' '}
-          <span className="font-bold">
-            Senior Software Engineer &amp; Technical Leader
-          </span>{' '}
-          with <span className="font-bold">{currentYear - 2019}+ years</span> of
-          professional experience building enterprise platforms.
-        </p>
-        <p className="pb-3">
-          I architect and deliver{' '}
-          <span className="underline">scalable eCommerce solutions</span>, lead
-          engineering teams, and bridge the gap between{' '}
-          <span className="underline">technical depth</span> and{' '}
-          <span className="underline">business impact</span>.
-        </p>
-        <p className="pb-3">Feel free to explore my journey!</p>
-      </motion.h1>
-
-      <motion.div
-        className="flex flex-col items-center justify-center gap-3 px-4 text-base font-medium sm:flex-row"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 dark:text-white"
-          href="/Bijan_Parvin_Resume_Software_Engineer.pdf"
-          download
-        >
-          Software Engineering CV{' '}
-          <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
-        </a>
-        <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 dark:text-white"
-          href="/Bijan_Parvin_Resume_Solutions_Engineer_Tech_Sales.pdf"
-          download
-        >
-          Solutions Engineering CV{' '}
-          <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
-        </a>
-      </motion.div>
-      <motion.div
-        className="flex flex-row items-center justify-center gap-2 p-4 text-lg font-medium sm:flex-row"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
-          href="https://www.linkedin.com/in/bparvin12/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
-          href="https://gitlab.com/bparvin12"
-          target="_blank"
-        >
-          <FaSquareGitlab />
-        </a>
-
-        <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue p-4 text-[1.35rem] text-tan transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white"
-          href="https://github.com/bparvin12"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
-      </motion.div>
     </section>
   );
 }

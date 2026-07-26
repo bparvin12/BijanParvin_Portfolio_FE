@@ -13,3 +13,37 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+/* Animated gradient border for profile image */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-gradient {
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+.gradient-border {
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #029791,
+    #3d5872,
+    #03b5ae,
+    #17273d,
+    #029791
+  );
+  animation: rotate-gradient 3s linear infinite;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
