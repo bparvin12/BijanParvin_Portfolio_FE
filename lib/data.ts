@@ -1,13 +1,23 @@
+import type { StaticImageData } from 'next/image';
 import React from 'react';
 import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 
-import bionutricsHomepage from '@/public/Bionutrics_Homepage.png';
 import brownBenefits from '@/public/brownbenefits.png';
+import metagenicsFrHomepage from '@/public/metagenics_fr_homepage.png';
 import jpMetagenics from '@/public/metagenics_jp.png';
 import metagenicsHomepage from '@/public/metagenics-homepage.png';
 import plmc from '@/public/plmc.png';
 import portalMeta from '@/public/portal_metagenics.png';
+
+export type ProjectData = {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: StaticImageData;
+  projectUrl: string;
+  decommissioned?: boolean;
+};
 
 export const links = [
   {
@@ -100,9 +110,9 @@ export const projectsData = [
     projectUrl: 'https://www.metagenics.com',
   },
   {
-    title: 'bionutrics.fr',
+    title: 'metagenics.fr',
     description:
-      'Spearheaded the frontend development and maintenance of the Bionutrics.fr eCommerce website, focusing on high performance, accessibility, and scalability.',
+      'Spearheaded the frontend development and maintenance of the Metagenics.fr eCommerce website, focusing on high performance, accessibility, and scalability.',
     tags: [
       'React',
       'Next.js',
@@ -123,8 +133,8 @@ export const projectsData = [
       'ESLint',
       'Adyen Payment Processor',
     ],
-    imageUrl: bionutricsHomepage,
-    projectUrl: 'https://bionutrics.fr',
+    imageUrl: metagenicsFrHomepage,
+    projectUrl: 'https://metagenics.fr',
   },
   {
     title: 'metagenics.co.jp',
@@ -169,6 +179,7 @@ export const projectsData = [
     ],
     imageUrl: portalMeta,
     projectUrl: 'https://portal.metagenics.com/hcp-landing-page',
+    decommissioned: true,
   },
   {
     title: 'brownbenefits.com',
@@ -200,8 +211,9 @@ export const projectsData = [
     ],
     imageUrl: plmc,
     projectUrl: 'https://www.plmc.com',
+    decommissioned: true,
   },
-] as const;
+] satisfies ProjectData[];
 
 export const personalProjectsData = [
   {
