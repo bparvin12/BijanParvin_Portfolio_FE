@@ -37,3 +37,14 @@ next-env.d.ts
 # SEO - Sitemap & Robots.txt 
 /public/sitemap.xml
 /public/robots.txt
+
+# claude
+.claude/settings.local.json
+.claude/_plans/*
+.claude/_pr_descriptions/*
+.claude/_code_reviews/*
+.claude/skills/
+.claude/scheduled_tasks.lock
+.claude/worktrees/
+skills-lock.json
+.agents/*

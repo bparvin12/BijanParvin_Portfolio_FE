@@ -32,23 +32,28 @@ export default function About() {
         . <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I <span className="underline">love</span> the
         feeling of finally figuring out a solution to a problem. My core stack
-        is <span className="font-medium">React, Next.js, and JS/TS</span>.
+        is{' '}
+        <span className="font-medium">
+          React, Next.js, TypeScript, and Node.js
+        </span>
+        , but I work across the full stack — from{' '}
+        <span className="font-medium">cloud infrastructure and APIs</span> to{' '}
+        <span className="font-medium">CI/CD pipelines and architecture</span>.
       </p>
 
-      <p>
-        I am an{' '}
+      <p className="mb-3">
+        Beyond writing code, I enjoy{' '}
         <span className="italic">
-          avid learner, debate lover, and forever optimistic
+          evaluating technologies, translating technical concepts for
+          stakeholders, and driving build-vs-buy decisions
         </span>
-        . I like <span>creating</span> products that either a) have fun and
-        nifty features or b) solve a problem for people. I especially love
-        creating products that have both of those things! Above all that, I am a{' '}
-        <span className="italic">supportive</span> and{' '}
-        <span className="italic">enthusiastic team player</span> dedicated to
-        streamlining processes and efficiently resolving project issues. Plus, I
-        make my best effort in <span className="italic">teaching</span> or
-        sharing my knowledge with my teammates, what I like to call,{' '}
-        <span className="font-medium">“spreading the love”.</span>
+        . I thrive at the intersection of engineering and business — whether
+        that&apos;s leading a payment platform migration, architecting an
+        AI-powered solution, or mentoring engineers on the team. Above all, I am
+        a <span className="italic">supportive</span> and{' '}
+        <span className="italic">enthusiastic team player</span> dedicated to{' '}
+        sharing knowledge with my teammates, what I like to call,{' '}
+        <span className="font-medium">&quot;spreading the love.&quot;</span>
       </p>
 
       <p>

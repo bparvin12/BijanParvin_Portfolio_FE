@@ -65,23 +65,24 @@ export default function Intro() {
       >
         <p className="pb-3">
           <span className="font-bold">Hello, I&apos;m Bijan.</span> I&apos;m a{' '}
-          <span className="font-bold">Software Developer</span> with{' '}
-          <span className="font-bold">{currentYear - 2019}+ years</span> of
-          professional experience. I enjoy crafting online adventures.
+          <span className="font-bold">
+            Senior Software Engineer &amp; Technical Leader
+          </span>{' '}
+          with <span className="font-bold">{currentYear - 2019}+ years</span> of
+          professional experience building enterprise platforms.
         </p>
         <p className="pb-3">
-          My niche is{' '}
-          <span className="underline">
-            Frontend Engineering ~ React (Next.js)
-          </span>{' '}
-          🚀, but I am a forever learner and enjoy diving into{' '}
-          <span className="underline">Full Stack Applications</span>.
+          I architect and deliver{' '}
+          <span className="underline">scalable eCommerce solutions</span>, lead
+          engineering teams, and bridge the gap between{' '}
+          <span className="underline">technical depth</span> and{' '}
+          <span className="underline">business impact</span>.
         </p>
-        <p className="pb-3">Feel free to explore my journey! 🗺️</p>
+        <p className="pb-3">Feel free to explore my journey!</p>
       </motion.h1>
 
       <motion.div
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
+        className="flex flex-col items-center justify-center gap-3 px-4 text-base font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -89,11 +90,19 @@ export default function Intro() {
         }}
       >
         <a
-          className="borderBlack group mx-8 flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 dark:text-white"
-          href="/BijanParvin_Resume_FE.pdf"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 dark:text-white"
+          href="/Bijan_Parvin_Resume_Software_Engineer.pdf"
           download
         >
-          Download CV{' '}
+          Software Engineering CV{' '}
+          <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
+        </a>
+        <a
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-policeBlue px-7 py-3 text-tan outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 dark:text-white"
+          href="/Bijan_Parvin_Resume_Solutions_Engineer_Tech_Sales.pdf"
+          download
+        >
+          Solutions Engineering CV{' '}
           <HiDownload className="opacity-60 transition group-hover:translate-y-1" />
         </a>
       </motion.div>
