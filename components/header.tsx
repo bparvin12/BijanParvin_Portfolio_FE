@@ -21,7 +21,7 @@ export default function Header() {
       ></motion.div>
 
       <nav className="fixed left-1/2 top-[0.15rem] flex h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-tan sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="flex w-full max-w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.8rem] font-medium text-tan sm:w-[initial] sm:max-w-none sm:flex-nowrap sm:gap-5 sm:text-[0.9rem]">
           {links.map((link) => (
             <motion.li
               className="relative flex h-3/4 items-center justify-center"
@@ -31,7 +31,7 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  'flex w-full items-center justify-center p-3 transition hover:text-yankeesBlue dark:text-gray-500 dark:hover:text-gray-300',
+                  'flex w-full items-center justify-center px-3 py-2.5 transition hover:text-yankeesBlue dark:text-gray-500 dark:hover:text-gray-300 sm:p-3',
                   {
                     'text-policeBlue dark:text-gray-200':
                       activeSection === link.name,

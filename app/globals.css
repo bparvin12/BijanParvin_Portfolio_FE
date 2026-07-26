@@ -47,3 +47,17 @@ html.dark {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Timeline library mobile overrides */
+@media (max-width: 640px) {
+  .vertical-timeline-element-content {
+    padding: 1rem 1.25rem !important;
+  }
+  .vertical-timeline-element-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .vertical-timeline::before {
+    width: 2px !important;
+  }
+}

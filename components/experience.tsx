@@ -27,13 +27,14 @@ export default function Experience() {
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
+              visible
               contentStyle={{
                 background:
                   theme === 'light' ? '#3D5872' : 'rgba(255, 255, 255, 0.05)',
                 boxShadow: 'none',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
                 textAlign: 'left',
-                padding: '1.3rem 2rem',
+                padding: '1rem 1.5rem',
               }}
               contentArrowStyle={{
                 borderRight:
@@ -51,11 +52,11 @@ export default function Experience() {
                 fontSize: '1.5rem',
               }}
             >
-              <h3 className="font-semibold capitalize text-tan">
+              <h3 className="font-heading font-semibold capitalize text-tan">
                 {item.title}
               </h3>
               <p className="!mt-0 font-normal text-tan">{item.location}</p>
-              <p className="!mt-1 !font-normal text-white/75 dark:text-white/75">
+              <p className="!mt-1 text-sm !font-normal text-white/75 dark:text-white/75">
                 {item.description}
               </p>
             </VerticalTimelineElement>

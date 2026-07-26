@@ -25,7 +25,13 @@ export default function Project({
 
   const cardContent = (
     <section className="relative max-w-[42rem] overflow-hidden rounded-lg border border-policeBlue bg-policeBlue transition hover:bg-policeBlue/90 dark:border-black/5 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8">
-      <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]">
+      {/* Mobile background image */}
+      <div className="absolute inset-0 sm:hidden">
+        <Image src={imageUrl} alt="" fill className="object-cover opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-policeBlue via-policeBlue/90 to-policeBlue/70 dark:from-slate-900 dark:via-slate-900/90 dark:to-slate-900/70" />
+      </div>
+
+      <div className="relative flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]">
         <div>
           <h3 className="text-2xl font-semibold text-tan">{title}</h3>
           {decommissioned && (
@@ -49,6 +55,7 @@ export default function Project({
         </ul>
       </div>
 
+      {/* Desktop positioned image */}
       <Image
         src={imageUrl}
         alt="Project I worked on"
@@ -76,12 +83,13 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
+      whileTap={{ scale: 0.98 }}
       className="group mb-3 last:mb-0 sm:mb-8"
     >
       {decommissioned ? (
         cardContent
       ) : (
-        <Link href={projectUrl} target="_blank">
+        <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
           {cardContent}
         </Link>
       )}

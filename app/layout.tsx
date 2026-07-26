@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
+import BackToTop from '@/components/back-to-top';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import ScrollProgress from '@/components/scroll-progress';
@@ -19,6 +20,15 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#B7ADA1' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
+  ],
   title: '{ bparvin } | Portfolio',
   description:
     'Bijan is a Senior Software Engineer and Technical Leader with 7+ years of experience building enterprise eCommerce platforms. Browse his portfolio of professional and personal work.',
@@ -39,7 +49,6 @@ export const metadata: Metadata = {
     'ecommerce',
     'MACH architecture',
   ],
-  themeColor: 'dark',
   creator: 'Bijan Parvin',
   openGraph: {
     type: 'website',
@@ -67,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} relative bg-tan pt-28 font-body text-policeBlue dark:bg-sky-950 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
+        className={`${inter.variable} ${spaceGrotesk.variable} relative bg-tan pt-28 font-body text-policeBlue dark:bg-slate-900 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
       >
         {/* top */}
         <div className="absolute right-[11rem] top-[-6rem] -z-10 size-[31.25rem] rounded-full bg-white/50 blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
@@ -85,6 +94,7 @@ export default function RootLayout({
             <GoogleAnalytics gaId="G-056KJYPZ0M" />
 
             <Toaster position="top-right" />
+            <BackToTop />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
