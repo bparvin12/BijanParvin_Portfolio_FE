@@ -312,22 +312,7 @@ test('creates checkout session', async () => {
 
 ```bash
 # Run all tests
-yarn test
-
-# Run tests for specific package
-yarn workspace @phoenix/payment test
-
-# Run tests in watch mode
-yarn test --watch
-
-# Run with coverage
-yarn test --coverage
-
-# Run only changed tests since main
-yarn test:since-main
-
-# Run E2E tests
-yarn workspace @phoenix/refapp-tests test:e2e
+npm run test
 ```
 
 ---
@@ -562,14 +547,6 @@ type User = {
 
 ## 🚀 Deployment & Release Workflow
 
-### Environment Progression
-
-**Environments**:
-
-1. **DEV** - Automatic deployment on merge to `main`
-2. **QA** - Manual version promotion via MACH Composer
-3. **Staging** - Manual version promotion via MACH Composer
-4. **Production** - Manual version promotion via MACH Composer
 
 ### Release Process
 
@@ -596,147 +573,6 @@ git push origin @phoenix/payment-v2.5.0
 - Packages for deployment
 - Uploads to S3 (for Lambda) or deploys to Vercel (for webapp)
 
-**4. MACH Composer Deployment**:
-
-Update component version in `gecom-mach-composer`:
-
-```yaml
-# development/components.yml
-- name: payment
-  source:
-    git:
-      url: git::https://github.com/Metagenics/gecom-apps.git//apps/generic/payment/terraform
-      ref: '@phoenix/payment-v2.5.0' # Update this
-```
-
-**5. Deploy via MACH**:
-
-```bash
-cd gecom-mach-composer
-mach-composer plan --environment development
-mach-composer apply --environment development
-```
-
-### Versioning (Semantic Versioning)
-
-**Format**: `MAJOR.MINOR.PATCH`
-
-- **MAJOR** (1.0.0 → 2.0.0): Breaking changes
-- **MINOR** (1.0.0 → 1.1.0): New features (backward compatible)
-- **PATCH** (1.0.0 → 1.0.1): Bug fixes (backward compatible)
-
-**Examples**:
-
-- `@phoenix/payment-v2.5.0` → `@phoenix/payment-v2.5.1` (bug fix)
-- `@phoenix/payment-v2.5.1` → `@phoenix/payment-v2.6.0` (new feature)
-- `@phoenix/payment-v2.6.0` → `@phoenix/payment-v3.0.0` (breaking change)
-
-### Hotfix Process
-
-**For Production Issues**:
-
-1. **Identify Version with Issue**:
-
-   ```bash
-   # Find deployed version
-   git tag | grep payment
-   # e.g., @phoenix/payment-v2.5.0
-   ```
-
-2. **Create Hotfix Branch from Tag**:
-
-   ```bash
-   git checkout -b hotfix/payment-v2.5.0-critical-fix @phoenix/payment-v2.5.0
-   ```
-
-3. **Apply Fix**:
-
-   - Make minimal changes to fix issue
-   - Add tests
-   - Update version to `v2.5.1` (patch increment)
-
-4. **Merge to Main**:
-
-   ```bash
-   # Create PR from hotfix branch
-   # After approval, merge to main
-   git checkout main
-   git merge hotfix/payment-v2.5.0-critical-fix
-   ```
-
-5. **Create Hotfix Tag**:
-
-   ```bash
-   git tag @phoenix/payment-v2.5.1
-   git push origin @phoenix/payment-v2.5.1
-   ```
-
-6. **Deploy Hotfix**:
-   - Update MACH Composer with `v2.5.1`
-   - Deploy to production immediately
-
----
-
-## 🏗️ Monorepo Structure
-
-### Repository Layout
-
-```
-gecom-apps/
-├── apps/
-│   ├── generic/           # Reusable backend services (35+ apps)
-│   │   ├── payment/       # Payment processing (Lambda)
-│   │   ├── commerce/      # Commerce platform integration
-│   │   ├── event-broker/  # Event processing
-│   │   ├── acp/           # Agentic Commerce Protocol
-│   │   └── ...
-│   └── refapp/            # Reference frontend application
-│       ├── refapp-webapp/ # Next.js React app
-│       ├── refapp-bff/    # GraphQL Backend For Frontend
-│       ├── refapp-tests/  # E2E testing
-│       └── ...
-├── libs/                  # Shared libraries (25+ packages)
-│   ├── shared/            # Common utilities
-│   ├── logger/            # Logging
-│   ├── commercetools-*/   # CommerceTools utilities
-│   ├── payment-utils/     # Payment helpers
-│   └── ...
-├── configs/               # Shared configurations
-│   ├── eslint/
-│   ├── jest/
-│   ├── typescript/
-│   └── release-it/
-├── tools/                 # CLI tools
-└── scripts/               # Build/utility scripts
-```
-
-### Package Naming Convention
-
-**Format**: `@phoenix/<name>`
-
-**Examples**:
-
-- `@phoenix/payment` - Payment service
-- `@phoenix/logger` - Logging library
-- `@phoenix/config-eslint` - ESLint config
-
-### Workspace Commands
-
-```bash
-# Run command in specific workspace
-yarn workspace @phoenix/payment build
-yarn workspace @phoenix/payment test
-
-# Run command in all workspaces
-yarn workspaces run build
-yarn workspaces run test
-
-# Filter with Turborepo
-yarn dev --filter=@phoenix/payment
-yarn test --filter=@phoenix/refapp-webapp
-```
-
----
 
 ## 🛠️ Technology Stack
 
@@ -947,42 +783,6 @@ screen.getByTestId('submit-button');             // ❌
 
 ---
 
-## 📊 Monitoring & Observability
-
-### Datadog Integration
-
-**Metrics Tracked**:
-
-- API response times
-- Error rates
-- Lambda invocations and durations
-- DynamoDB read/write capacity
-- Custom business metrics
-
-**Logging**:
-
-```typescript
-import { logger } from '@phoenix/logger';
-
-logger.info('User action completed', { userId, action: 'purchase' });
-logger.error('Payment failed', { error, orderId });
-```
-
-### CloudWatch
-
-- Lambda function logs
-- API Gateway logs
-- ALB access logs
-- Custom metrics and alarms
-
-### Alerts
-
-- High error rate (> 1%)
-- Elevated latency (p95 > 2s)
-- Failed deployments
-- Security vulnerabilities detected
-
----
 
 ## 🚨 Common Pitfalls to Avoid
 
@@ -1015,14 +815,6 @@ logger.error('Payment failed', { error, orderId });
 ---
 
 ## 📚 Key Resources
-
-### Internal Documentation
-
-- [GECOM WoW](https://catalina.atlassian.net/wiki/spaces/NEA/pages/2826436632)
-- [Development WoW](https://catalina.atlassian.net/wiki/spaces/NEA/pages/2826207304)
-- [PR Process](https://catalina.atlassian.net/wiki/spaces/NEA/pages/2873098287)
-- [Release Process](https://catalina.atlassian.net/wiki/spaces/NEA/pages/2831220779)
-- [Testing Guidelines](https://catalina.atlassian.net/wiki/spaces/NEA/pages/3407118377)
 
 ### External Resources
 
@@ -1074,106 +866,12 @@ Claude Code has access to production monitoring and infrastructure tools for tro
 
 ### Vercel Access
 
-**Setup**: `VERCEL_TOKEN` environment variable in `~/.zshrc`
-
-**API Usage**:
-
-```bash
-# List deployments
-curl -s -H "Authorization: Bearer $VERCEL_TOKEN" \
-  "https://api.vercel.com/v6/deployments?teamId=team_z8HLNG64MFkTxleZFoXQiRG5&limit=10"
-
-# Get deployment logs (replace DEPLOYMENT_ID)
-curl -s -H "Authorization: Bearer $VERCEL_TOKEN" \
-  "https://api.vercel.com/v3/deployments/DEPLOYMENT_ID/events?teamId=team_z8HLNG64MFkTxleZFoXQiRG5"
-
-# Get project details
-curl -s -H "Authorization: Bearer $VERCEL_TOKEN" \
-  "https://api.vercel.com/v9/projects/prod-nam-globalecomm-frontend?teamId=team_z8HLNG64MFkTxleZFoXQiRG5"
-```
-
-**Key Projects**:
-
-- `prod-nam-globalecomm-frontend` - Production frontend
-- Team ID: `team_z8HLNG64MFkTxleZFoXQiRG5`
-
 **Common Investigations**:
 
 - Check for "data for page exceeds threshold" warnings in build logs
 - Monitor serverless function cold starts
 - Verify Edge caching behavior
 - Check for slow GraphQL queries in function logs
-
-### AWS Access
-
-**Profile**: `ai-agent-readonly` (read-only production access)
-
-**Usage**:
-
-```bash
-# CloudFront distributions
-aws cloudfront list-distributions --profile ai-agent-readonly
-
-# Get specific distribution config
-aws cloudfront get-distribution-config --id DISTRIBUTION_ID --profile ai-agent-readonly
-
-# Check Lambda functions
-aws lambda list-functions --profile ai-agent-readonly --region us-east-1
-
-# Get CloudWatch logs
-aws logs filter-log-events --log-group-name /aws/lambda/FUNCTION_NAME \
-  --profile ai-agent-readonly --region us-east-1
-```
-
-**Key Resources**:
-
-- CloudFront API distribution: `E12MXU1DGFXC0A` (api.metagenics.com)
-- Region: `us-east-1`
-
-**Common Investigations**:
-
-- CloudFront cache hit/miss ratios
-- Compression settings (Compress: true/false)
-- TTL configurations
-- Origin response times
-
-### Datadog Access
-
-**Setup**: Environment variables in `~/.zshrc`:
-
-- `DATADOG_API_KEY`
-- `DATADOG_APP_KEY`
-- `DATADOG_SITE` (e.g., `datadoghq.eu`)
-
-**API Usage**:
-
-```bash
-# RUM events search
-curl -s -X POST "https://${DATADOG_SITE}/api/v2/rum/events/search" \
-  -H "DD-API-KEY: $DATADOG_API_KEY" \
-  -H "DD-APPLICATION-KEY: $DATADOG_APP_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "filter": {
-      "from": "now-1h",
-      "to": "now",
-      "query": "@type:view @application.id:YOUR_APP_ID"
-    },
-    "page": {"limit": 50}
-  }'
-```
-
-**Key Metrics**:
-
-- `view.loading_time` - Page loading time (nanoseconds)
-- `view.largest_contentful_paint` - LCP (nanoseconds)
-- `view.first_contentful_paint` - FCP (nanoseconds)
-- Application ID: `48f860ae-65ec-4005-a22f-7b7ab17e618c`
-
-**jq Processing Tips**:
-
-- Write complex jq filters to temp files to avoid shell escaping issues
-- Example: `jq -f /tmp/process_rum.jq response.json`
 
 ### Performance Investigation Workflow
 
@@ -1183,21 +881,7 @@ curl -s -X POST "https://${DATADOG_SITE}/api/v2/rum/events/search" \
 4. **Review CloudFront** - Check caching and compression settings
 5. **Trace to Code** - Find specific components causing issues
 
-### Key Performance Files
-
-**Frontend (refapp-webapp)**:
-
-- `src/api/modules/AlgoliaProductListing/AlgoliaProductListingConnector.tsx` - Algolia search config
-- `src/api/pages-nextjs/CatchAllPage/AppQuery.graphql` - Header/footer queries
-- `src/api/pages-nextjs/CatchAllPage/catchAllPageServerSearchQuery.tsx` - Server-side Algolia
-
-**Backend (algolia service)**:
-
-- `apps/generic/algolia/src/http/graphql/ProductDetail/ProductDetailFeature.resolver.ts` - CrossSell queries
 
 ---
 
-**Last Updated**: 2025-12-02
-**Maintained By**: GECOM Engineering Team
-
-**Questions?** Ask in **#engineering** Slack/Teams channel or refer to Confluence documentation.
+**Maintained By**: Bijan

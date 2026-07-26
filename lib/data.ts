@@ -163,6 +163,19 @@ export const projectsData = [
     projectUrl: 'https://www.metagenics.co.jp',
   },
   {
+    title: 'brownbenefits.com',
+    description:
+      'Developed and customized the brownbenefits.com landing page on Wix, focusing on branding requirements, visual appeal, and user experience',
+    tags: [
+      'Wix',
+      'HTML/CSS',
+      'Cross-browser Compatibility',
+      'Accessibility Standards',
+    ],
+    imageUrl: brownBenefits,
+    projectUrl: 'https://www.brownbenefits.com',
+  },
+  {
     title: 'portal.metagenics.com',
     description:
       'Led the frontend development and deployment efforts for the portal.metagenics.com website, a marketing platform sponsored by Metagenics, focusing on user engagement, performance, and search engine optimization (SEO).',
@@ -180,19 +193,6 @@ export const projectsData = [
     imageUrl: portalMeta,
     projectUrl: 'https://portal.metagenics.com/hcp-landing-page',
     decommissioned: true,
-  },
-  {
-    title: 'brownbenefits.com',
-    description:
-      'Developed and customized the brownbenefits.com landing page on Wix, focusing on branding requirements, visual appeal, and user experience',
-    tags: [
-      'Wix',
-      'HTML/CSS',
-      'Cross-browser Compatibility',
-      'Accessibility Standards',
-    ],
-    imageUrl: brownBenefits,
-    projectUrl: 'https://www.brownbenefits.com',
   },
   {
     title: 'plmc.com',
@@ -217,11 +217,20 @@ export const projectsData = [
 
 export const personalProjectsData = [
   {
-    title: 'Portfolio',
+    title: 'InvestorIQ',
     description:
-      'Responsive portfolio for displaying professional and personal experience',
-    tags: ['React', 'Next.js', 'Vercel', 'HTML/CSS', 'TypeScript', 'Tailwind'],
-    link: 'https://github.com/bparvin12/BijanParvin_Portfolio_FE',
+      'AI-powered real estate investment analysis platform. Score US markets, underwrite deals across five strategies (buy-and-hold, BRRRR, fix-and-flip, house-hacking, short-term rental), and get plain-English AI guidance backed by real financial calculations from Census, HUD, FRED, FEMA, and Zillow data.',
+    tags: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind',
+      'Vercel',
+      'AI / LLM',
+      'REST APIs',
+    ],
+    link: 'https://github.com/bparvin12/real-estate-investment-ai',
+    websiteLink: 'https://real-estate-investment-ai.vercel.app/',
   },
   {
     title: 'Sports Betting Odds',
@@ -240,6 +249,13 @@ export const personalProjectsData = [
     ],
     link: 'https://github.com/bparvin12/sports-betting-odds',
     websiteLink: 'https://sports-betting-odds.vercel.app/',
+  },
+  {
+    title: 'Portfolio',
+    description:
+      'Responsive portfolio for displaying professional and personal experience',
+    tags: ['React', 'Next.js', 'Vercel', 'HTML/CSS', 'TypeScript', 'Tailwind'],
+    link: 'https://github.com/bparvin12/BijanParvin_Portfolio_FE',
   },
   {
     title: 'Next.js Marketing Template',
