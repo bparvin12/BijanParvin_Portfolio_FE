@@ -233,6 +233,24 @@ export const personalProjectsData = [
     websiteLink: 'https://real-estate-investment-ai.vercel.app/',
   },
   {
+    title: 'ProposalAI',
+    description:
+      'AI-powered proposal generation platform for agencies, consultants, and freelancers. Create professional business proposals in minutes with AI drafting, smart analytics, brand customization, PDF export, and shareable links.',
+    tags: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind',
+      'Vercel',
+      'AI / LLM',
+      'Stripe',
+      'Drizzle ORM',
+      'Neon Postgres',
+    ],
+    link: 'https://github.com/bparvin12/proposalai',
+    websiteLink: 'https://proposalai-blush.vercel.app/',
+  },
+  {
     title: 'Sports Betting Odds',
     description:
       'Sports Betting Odds and Spreads for all in-season sports. NFL, NHL, NBA, etc.',
